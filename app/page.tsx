@@ -1,7 +1,10 @@
+"use client"
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, Users, BookOpen, Award, Play, Clock, User } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function HomePage() {
   return (
@@ -132,7 +135,13 @@ export default function HomePage() {
       </section>
 
       {/* Content Grid Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <motion.section
+        className="py-16 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Image */}
@@ -200,10 +209,16 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <motion.section
+        className="py-16 px-4 sm:px-6 lg:px-8 bg-white"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -236,10 +251,17 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+      <motion.section
+        id="about"
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -306,10 +328,17 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Courses Section */}
-      <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <motion.section
+        id="courses"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -325,60 +354,18 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                title: "Web Development Bootcamp",
-                instructor: "Sarah Johnson",
-                rating: 4.9,
-                students: 2500,
-                duration: "12 weeks",
-                price: "20K",
-                image: "/image/comp.avif",
-              },
-              {
-                title: "Digital Marketing Mastery",
-                instructor: "Mike Chen",
-                rating: 4.8,
-                students: 1800,
-                duration: "8 weeks",
-                price: "20K",
-                image: "/image/comp.avif",
-              },
-              {
-                title: "Data Science Fundamentals",
-                instructor: "Dr. Emily Davis",
-                rating: 4.9,
-                students: 3200,
-                duration: "16 weeks",
-                price: "20K",
-                image: "/image/comp.avif",
-              },
-              {
-                title: "UI/UX Design Complete",
-                instructor: "Alex Rodriguez",
-                rating: 4.7,
-                students: 1500,
-                duration: "10 weeks",
-                price: "20K",
-                image: "/image/comp.avif",
-              },
-              {
-                title: "Mobile App Development",
-                instructor: "Lisa Wang",
-                rating: 4.8,
-                students: 2100,
-                duration: "14 weeks",
-                price: "20K",
-                image: "/image/comp.avif",
-              },
-              {
-                title: "Business Analytics",
-                instructor: "James Wilson",
-                rating: 4.6,
-                students: 1200,
-                duration: "6 weeks",
-                price: "20K",
-                image: "/image/comp.avif",
-              },
+              { title: "Basic Web Development (HTML, CSS, JavaScript & GitHub)", instructor: "Stephen Mayowa", rating: 4.9, students: 2500, duration: "4 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "REACT Framework", instructor: "Mike Chen", rating: 4.8, students: 1800, duration: "4 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Coding with AI", instructor: "Dr. Emily Davis", rating: 4.9, students: 3200, duration: "4 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "UI/UX", instructor: "Alex Rodriguez", rating: 4.7, students: 1500, duration: "4 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Data Analysis with Excel & PowerBi", instructor: "Lisa Wang", rating: 4.8, students: 2100, duration: "4 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Build Websites with Wordpress", instructor: "James Wilson", rating: 4.6, students: 1200, duration: "2 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Graphic Design with Canva", instructor: "Sarah Johnson", rating: 4.9, students: 2500, duration: "4 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "AI 3D ANIMATION", instructor: "Mike Chen", rating: 4.8, students: 1800, duration: "4 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Digital Marketing", instructor: "Dr. Emily Davis", rating: 4.9, students: 3200, duration: "6 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Virtual Assistant", instructor: "Alex Rodriguez", rating: 4.7, students: 1500, duration: "6 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Video Editing with Capcut", instructor: "Lisa Wang", rating: 4.8, students: 2100, duration: "2 weeks", price: "$99", image: "/image/comp.avif" },
+              { title: "Project Management", instructor: "James Wilson", rating: 4.6, students: 1200, duration: "2 weeks", price: "$99", image: "/image/comp.avif" },
             ].map((course, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="relative">
@@ -414,6 +401,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
+
           </div>
 
           <div className="text-center mt-12">
@@ -425,10 +413,17 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8">
+      <motion.section
+        id="testimonials"
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -495,10 +490,16 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+      <motion.section
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Start Your Learning Journey?</h2>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
@@ -516,10 +517,17 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+      <motion.footer
+        id="contact"
+        className="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
@@ -640,7 +648,7 @@ export default function HomePage() {
             <p className="text-gray-400">© 2025 Roshe Academy. All rights reserved. | Privacy Policy | Terms of Service</p>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   )
 }
