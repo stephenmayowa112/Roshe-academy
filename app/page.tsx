@@ -20,7 +20,7 @@ export default function HomePage() {
                 className="mr-2" 
               />
               <span className="text-xl font-bold text-gray-900">
-                Roshe <span className="text-purple-600">Academy</span>
+                Roshe <span className="text-black">Academy</span>
               </span>
             </div>
 
@@ -630,7 +630,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Roshe Academy. All rights reserved. | Privacy Policy | Terms of Service</p>
+            <p className="text-gray-400">© 2025 Roshe Academy. All rights reserved. | Privacy Policy | Terms of Service</p>
           </div>
         </div>
       </footer>

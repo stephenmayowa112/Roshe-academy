@@ -9,7 +9,10 @@ const config: Config = {
     "*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
-  	extend: {
+    extend: {
+    	fontFamily: {
+      		sans: ['var(--font-poppins)', 'ui-sans-serif', 'system-ui'],
+    	},
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
