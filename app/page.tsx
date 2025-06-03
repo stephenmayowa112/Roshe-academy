@@ -17,6 +17,7 @@ export default function HomePage() {
                 alt="Roshe Academy Logo" 
                 width={40} 
                 height={40} 
+                priority
                 className="mr-2" 
               />
               <span className="text-xl font-bold text-gray-900">
@@ -57,7 +58,8 @@ export default function HomePage() {
           {/* Floating Profile Images */}
           <div className="absolute -top-10 -left-10 w-20 h-20 rounded-2xl overflow-hidden transform rotate-12 hidden lg:block">
             <Image
-              src="/placeholder.svg?height=80&width=80"
+              loading="lazy"
+              src="/image/comp.avif"
               alt="Student profile"
               width={80}
               height={80}
@@ -67,7 +69,8 @@ export default function HomePage() {
 
           <div className="absolute -top-5 -right-10 w-20 h-20 rounded-2xl overflow-hidden transform -rotate-12 hidden lg:block">
             <Image
-              src="/placeholder.svg?height=80&width=80"
+              loading="lazy"
+              src="/image/comp.avif"
               alt="Student profile"
               width={80}
               height={80}
@@ -77,7 +80,8 @@ export default function HomePage() {
 
           <div className="absolute top-32 -left-20 w-16 h-16 rounded-2xl overflow-hidden transform rotate-45 hidden lg:block">
             <Image
-              src="/placeholder.svg?height=64&width=64"
+              loading="lazy"
+              src="/image/comp.avif" 
               alt="Student profile"
               width={64}
               height={64}
@@ -87,7 +91,8 @@ export default function HomePage() {
 
           <div className="absolute top-40 -right-16 w-16 h-16 rounded-2xl overflow-hidden transform -rotate-45 hidden lg:block">
             <Image
-              src="/placeholder.svg?height=64&width=64"
+              loading="lazy"
+              src="/image/comp.avif"
               alt="Student profile"
               width={64}
               height={64}
@@ -134,7 +139,8 @@ export default function HomePage() {
             <div className="lg:col-span-1">
               <div className="rounded-2xl overflow-hidden h-80 lg:h-full">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  loading="lazy"
+                  src="/image/comp.avif"
                   alt="Online learning workspace"
                   width={400}
                   height={400}
@@ -151,7 +157,7 @@ export default function HomePage() {
                   {[1, 2, 3, 4].map((i) => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
                       <Image
-                        src={`/placeholder.svg?height=40&width=40`}
+                        src="/image/comp.avif"
                         alt={`Teacher ${i}`}
                         width={40}
                         height={40}
@@ -183,7 +189,8 @@ export default function HomePage() {
             <div className="lg:col-span-1">
               <div className="rounded-2xl overflow-hidden h-80 lg:h-full">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  loading="lazy"
+                  src="/image/comp.avif"
                   alt="Student learning with tablet"
                   width={400}
                   height={400}
@@ -203,28 +210,28 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">10K+</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">1K+</h3>
               <p className="text-gray-600">Active Students</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <BookOpen className="w-8 h-8 text-orange-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">200+</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">10</h3>
               <p className="text-gray-600">Online Courses</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">40+</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">10</h3>
               <p className="text-gray-600">Expert Instructors</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-2">4.9</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-2">4.8</h3>
               <p className="text-gray-600">Average Rating</p>
             </div>
           </div>
@@ -280,7 +287,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src="/image/comp.avif"
                   alt="Students learning online"
                   width={600}
                   height={500}
@@ -324,8 +331,8 @@ export default function HomePage() {
                 rating: 4.9,
                 students: 2500,
                 duration: "12 weeks",
-                price: "$99",
-                image: "/placeholder.svg?height=200&width=300",
+                price: "20K",
+                image: "/image/comp.avif",
               },
               {
                 title: "Digital Marketing Mastery",
@@ -333,8 +340,8 @@ export default function HomePage() {
                 rating: 4.8,
                 students: 1800,
                 duration: "8 weeks",
-                price: "$79",
-                image: "/placeholder.svg?height=200&width=300",
+                price: "20K",
+                image: "/image/comp.avif",
               },
               {
                 title: "Data Science Fundamentals",
@@ -342,8 +349,8 @@ export default function HomePage() {
                 rating: 4.9,
                 students: 3200,
                 duration: "16 weeks",
-                price: "$129",
-                image: "/placeholder.svg?height=200&width=300",
+                price: "20K",
+                image: "/image/comp.avif",
               },
               {
                 title: "UI/UX Design Complete",
@@ -351,8 +358,8 @@ export default function HomePage() {
                 rating: 4.7,
                 students: 1500,
                 duration: "10 weeks",
-                price: "$89",
-                image: "/placeholder.svg?height=200&width=300",
+                price: "20K",
+                image: "/image/comp.avif",
               },
               {
                 title: "Mobile App Development",
@@ -360,8 +367,8 @@ export default function HomePage() {
                 rating: 4.8,
                 students: 2100,
                 duration: "14 weeks",
-                price: "$109",
-                image: "/placeholder.svg?height=200&width=300",
+                price: "20K",
+                image: "/image/comp.avif",
               },
               {
                 title: "Business Analytics",
@@ -369,8 +376,8 @@ export default function HomePage() {
                 rating: 4.6,
                 students: 1200,
                 duration: "6 weeks",
-                price: "$69",
-                image: "/placeholder.svg?height=200&width=300",
+                price: "20K",
+                image: "/image/comp.avif",
               },
             ].map((course, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-shadow">
@@ -443,7 +450,7 @@ export default function HomePage() {
                 content:
                   "Roshe Academy completely changed my career trajectory. The courses are well-structured and the instructors are amazing!",
                 rating: 5,
-                image: "/placeholder.svg?height=60&width=60",
+                image: "/image/comp.avif",
               },
               {
                 name: "David Thompson",
@@ -451,7 +458,7 @@ export default function HomePage() {
                 content:
                   "I learned more in 3 months than I did in years of self-study. The practical projects really helped me understand the concepts.",
                 rating: 5,
-                image: "/placeholder.svg?height=60&width=60",
+                image: "/image/comp.avif",
               },
               {
                 name: "Maria Garcia",
@@ -459,7 +466,7 @@ export default function HomePage() {
                 content:
                   "The flexibility to learn at my own pace while working full-time was exactly what I needed. Highly recommend!",
                 rating: 5,
-                image: "/placeholder.svg?height=60&width=60",
+                image: "/image/comp.avif",
               },
             ].map((testimonial, index) => (
               <Card key={index} className="p-6">

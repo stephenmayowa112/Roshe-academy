@@ -11,9 +11,9 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Roshe Academy',
+  description: 'Created with Roshe Academy',
+  generator: 'Roshe Academy',
 }
 
 export default function RootLayout({
