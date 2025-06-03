@@ -1,0 +1,6 @@
+{
+  // Disable CSS validation errors for Tailwind's at-rules
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore"
+}

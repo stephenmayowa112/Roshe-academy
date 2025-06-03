@@ -7,8 +7,10 @@ body {
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  @supports (text-wrap: balance) {
+    .text-balance {
+      text-wrap: balance;
+    }
   }
 }
 
@@ -91,4 +93,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Added smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
